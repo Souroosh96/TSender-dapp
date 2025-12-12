@@ -1,0 +1,95 @@
+"use client"
+
+import { ConnectButton } from "@rainbow-me/rainbowkit"
+import { FaGithub } from "react-icons/fa"
+import Image from "next/image"
+
+export default function Header() {
+  return (
+    <nav className="px-8 py-4.5 border-b-[1px] border-zinc-100 flex flex-row justify-between items-center bg-white xl:min-h-[77px]">
+      <div className="flex items-center gap-2.5 md:gap-6">
+        <a href="/" className="flex items-center gap-1 text-zinc-800">
+          <Image
+          src="https://st2.depositphotos.com/4398873/10651/v/450/depositphotos_106515912-stock-illustration-trident-black-silhouette-sea-neptunus.jpg"
+          alt="TSender"
+          width={50}
+          height={50}
+          />
+          <h1 className="font-bold text-2xl hidden md:block">TSender</h1>
+        </a>
+        <a
+          href="https://github.com/cyfrin/TSender"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-1 rounded-lg bg-zinc-900 hover:bg-zinc-800 transition-colors border-2 border-zinc-600 hover:border-zinc-500 cursor-alias hidden md:block"
+        >
+          <FaGithub className="h-5 w-5 text-white" />
+        </a>
+      </div>
+      <h3 className="italic text-left hidden text-zinc-500 lg:block">
+        My first Airdrop DApp!
+      </h3>
+      <div className="flex items-center gap-4">
+        <ConnectButton />
+      </div>
+    </nav>
+  )
+}
+
+
+// 'use client';
+
+// import Image from "next/image";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { FaGithub } from "react-icons/fa";
+// import Link from "next/link";
+
+// export default function Header() {
+//   return (
+//     <header 
+//       style={{
+//         display: "flex",
+//         alignItems: "center",
+//         justifyContent: "space-between",
+//         padding: "1rem 2rem",
+//         borderBottom: "1px solid #222",
+//       }}
+//     >
+//       {/* Left Side (Logo + Title) */}
+//       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+//         <Image 
+//           src="/logo.svg"      // Change to your logo path, or remove Image if no logo
+//           alt="TS-Sender Logo"
+//           width={32}
+//           height={32}
+//         />
+//         <h2 style={{ fontWeight: 600, fontSize: "1.3rem" }}>TS-Sender</h2>
+//       </div>
+
+//       {/* Right Side */}
+//       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+//         {/* GitHub Button */}
+//         <Link 
+//           href="https://github.com/your-repo-link" 
+//           target="_blank" 
+//           rel="noopener noreferrer"
+//           style={{
+//             display: "flex",
+//             alignItems: "center",
+//             gap: "0.4rem",
+//             padding: "0.4rem 0.7rem",
+//             border: "1px solid #444",
+//             borderRadius: "6px",
+//             cursor: "pointer",
+//           }}
+//         >
+//           <FaGithub size={20} />
+//           <span>GitHub</span>
+//         </Link>
+
+//         {/* Connect Wallet Button */}
+//         <ConnectButton />
+//       </div>
+//     </header>
+//   );
+// }
