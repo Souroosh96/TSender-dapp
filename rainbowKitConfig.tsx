@@ -1,11 +1,19 @@
 "use client";
 
 import { getDefaultConfig } from "@rainbow-me/rainbowkit";
-import { anvil, zkSync, mainnet } from "wagmi/chains";
+import { mainnet, sepolia, zkSync } from "wagmi/chains";
 
-export default getDefaultConfig({
+const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID;
+
+if (!projectId) {
+    throw new Error("Missing NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID");
+}
+
+const config = getDefaultConfig({
     appName: "TSender",
-    projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID!,
-    chains: [anvil, zkSync, mainnet],
-    ssr: false
+    projectId,
+    chains: [mainnet, sepolia, zkSync],
+    ssr: false, // ✅ REQUIRED for Vercel
 });
+
+export default config;
