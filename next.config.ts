@@ -14,7 +14,24 @@ const nextConfig: NextConfig = {
   },
   basePath: "",
   assetPrefix: "./",
-  trailingSlash: true
+  trailingSlash: true,
+  webpack: (config, { isServer }) => {
+    // Ignore thread-stream test files and LICENSE
+    config.module?.rules.push({
+      test: /thread-stream\/.*\.(test|LICENSE|zip|sh|mjs)$/,
+      loader: "ignore-loader",
+    });
+
+    // Optionally mark 'desm' as external if it causes issues
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        desm: false,
+      };
+    }
+
+    return config;
+  },
 };
 
 export default nextConfig;
