@@ -24,7 +24,7 @@ https://tsender-dapp-vercel-c73k9dxlf-sourooshs-projects-1161fc7b.vercel.app/
 A short demo showing how to use the dApp:
 
 👉 **YouTube Demo:**  
-`<LINK_TO_YOUR_YOUTUBE_VIDEO>`
+https://youtu.be/YvPcN3tSpj4
 
 ---
 
@@ -83,14 +83,20 @@ A short demo showing how to use the dApp:
 
 ---
 
-## 🧪 Testing the DApp (Minting USDT on Sepolia)
+## 🧪 Testing the DApp
 
-To test the dApp, you need **test USDT (ERC-20)** on the **Sepolia** network.
+To test the dApp on the **Sepolia** testnet, you need:
+- Some **Sepolia ETH** (for gas fees)
+- Some **test USDT (ERC-20)**
 
-### USDT Contract on Sepolia
+### 1️⃣ Minting USDT on Sepolia
+
+USDT is deployed on Sepolia and can be freely minted for testing.
+
+**USDT Contract:**  
 🔗 https://sepolia.etherscan.io/token/0x952897ed3f14576b51ca4e5512809a88dbdb5ca5
 
-### Steps to Mint USDT
+#### Steps to Mint USDT
 
 1. Open the contract link above.
 2. Go to the **Contract** tab.
@@ -104,10 +110,19 @@ To test the dApp, you need **test USDT (ERC-20)** on the **Sepolia** network.
      ```
      100000000
      ```
-     (`100 × 10⁶`)
+     (`100 × 10⁶`, one hundred million)
 6. Confirm the transaction.
 
 Once minted, connect your wallet to the dApp and start testing.
+
+---
+
+### 2️⃣ Sepolia ETH Faucet (Gas Fees)
+
+To pay for gas fees while testing, you can obtain free **Sepolia ETH** from the following faucet:
+
+🔗 **Google Cloud Sepolia Faucet:**  
+https://cloud.google.com/application/web3/faucet/ethereum/sepolia
 
 ---
 
